@@ -5,11 +5,11 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - name: maven
-    port: 8080
-    nodePort: 31002
-    targetPort: 8080
-    protocol: TCP
+    - name: maven
+      port: 8080
+      nodePort: 31002
+      targetPort: 8080
+      protocol: TCP
   selector:
     app: maven
 ---
@@ -28,7 +28,7 @@ spec:
         - name: maven
           image: 192.168.0.108:5000/maven:latest
           ports:
-          - containerPort: 8080
+            - containerPort: 8080
           env:
             - name: key
               value: "value"
