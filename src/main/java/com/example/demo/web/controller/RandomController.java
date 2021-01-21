@@ -22,7 +22,7 @@ public class RandomController {
         list.add(new Row("RandomStringUtils.random(5)", RandomStringUtils.random(5), "产生5位长度的随机字符串，中文环境下是乱码"));
 
         list.add(new Row("RandomStringUtils.random(5, new char[]{'a', 'b', 'c', 'd', 'e', 'f', '1', '2', '3'})",
-                RandomStringUtils.random(5, new char[]{'a', 'b', 'c', 'd', 'e', 'f', '1', '2', '3'}),
+                RandomStringUtils.random(5, 'a', 'b', 'c', 'd', 'e', 'f', '1', '2', '3'),
                 "使用指定的字符生成5位长度的随机字符串"));
 
         list.add(new Row("RandomStringUtils.randomAlphanumeric(5)",
@@ -44,7 +44,7 @@ public class RandomController {
         return list;
     }
 
-    class Row {
+    static class Row {
         private String key;
         private String value;
         private String message;

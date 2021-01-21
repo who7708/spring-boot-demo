@@ -1,17 +1,26 @@
 # spring-boot-demo
 
-#### purpose
+#### 说明
 
-1. factory build
-2. spring boot test
+1. 集成 arthas
+2. 集成 jq
+3. 集成 actuator
 
-### Info
+   base.Dockerfile
+
+### 配置
+
+测试用的, 开启 actuator
 
 ```properties
-server.port=8080
+server.port=7001
+
+management.server.port=7002
+management.endpoint.health.show-details=always
+management.endpoints.web.exposure.include=*
 ```
 
-### API
+### 测试接口
 
 1. GET /
 2. GET /?name=cheney
