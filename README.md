@@ -1,4 +1,4 @@
-# SpringBootDemo
+# spring-boot-demo
 
 #### purpose
 
@@ -7,9 +7,8 @@
 
 ### Info
 
-```yaml
-server:
-  port: 8080
+```properties
+server.port=8080
 ```
 
 ### API
@@ -17,3 +16,12 @@ server:
 1. GET /
 2. GET /?name=cheney
 3. GET /random
+
+### 更新
+
+#### 2021/01/21
+
+* 更新 `maven` build
+* 增加 `maven-antrun-plugin` 插件
+* 增加 `Dockerfile` 配置文件
+* 增加打包 `shell`
