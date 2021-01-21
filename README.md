@@ -25,3 +25,5 @@ server.port=8080
 * 增加 `maven-antrun-plugin` 插件
 * 增加 `Dockerfile` 配置文件
 * 增加打包 `shell`
+* 更新 spring-boot 版本 2.4.2
+* 新增 management
