@@ -20,7 +20,7 @@ RUN if $MIRROR; then MAVEN_HOST=${MIRROR_MAVEN_HOST} ;ALPINE_HOST=${MIRROR_ALPIN
     apk add --no-cache bash && \
     apk add --no-cache jq && \
     wget "https://arthas.aliyun.com/arthas-boot.jar" -qO /opt/arthas-boot.jar && \
-    echo "java -jar /opt/arthas-boot.jar" > /usr/local/bin/arthas && \
+    echo "java -jar /opt/arthas-boot.jar --repo-mirror aliyun" > /usr/local/bin/arthas && \
     chmod a+x /usr/local/bin/arthas
 
 COPY ${APP_PATH} /app/${APP}
