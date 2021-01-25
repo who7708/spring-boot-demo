@@ -8,6 +8,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 /**
  * Created by cheney on 2017/6/15.
  */
@@ -17,7 +20,7 @@ public class IndexController {
     private Logger logger = LoggerFactory.getLogger(getClass());
 
     @GetMapping("")
-    public JSONObject hello(String name) {
+    public JSONObject hello(HttpServletRequest request, HttpServletResponse response, String name) {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("random11", RandomStringUtils.randomAlphabetic(16));
         if (StringUtils.isNotBlank(name)) {

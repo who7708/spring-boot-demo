@@ -28,6 +28,14 @@ management.endpoints.web.exposure.include=*
 
 ### 更新
 
+#### 2021/01/25
+
+* agent
+
+```
+java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -javaagent:agent.jar -Dserver.port=7001 -jar target/spring-boot-demo.jar
+```
+
 #### 2021/01/21
 
 * 新增 打包/启动脚本
